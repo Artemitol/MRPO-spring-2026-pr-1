@@ -1,0 +1,71 @@
+erDiagram
+    role_type {
+        int id PK
+        varchar name UK
+    }
+
+    app_user {
+        int id PK
+        varchar full_name
+        varchar login UK
+        varchar password_hash
+        varchar role FK
+    }
+
+    category {
+        int id PK
+        varchar name UK
+    }
+
+    manufacturer {
+        int id PK
+        varchar name UK
+    }
+
+    supplier {
+        int id PK
+        varchar name UK
+    }
+
+    product {
+        int id PK
+        varchar title
+        int category_id FK
+        text description
+        int manufacturer_id FK
+        int supplier_id FK
+        numeric price
+        varchar unit
+        int stock
+        int discount_percent
+        text image_path
+    }
+
+    order_status {
+        int id PK
+        varchar name UK
+    }
+
+    shop_order {
+        int id PK
+        varchar article
+        int status_id FK
+        text pickup_address
+        date order_date
+        date issue_date
+    }
+
+    order_item {
+        int id PK
+        int order_id FK
+        int product_id FK
+        int quantity
+    }
+
+    role_type ||--o{ app_user : "role"
+    category ||--o{ product : "category_id"
+    manufacturer ||--o{ product : "manufacturer_id"
+    supplier ||--o{ product : "supplier_id"
+    order_status ||--o{ shop_order : "status_id"
+    shop_order ||--o{ order_item : "order_id"
+    product ||--o{ order_item : "product_id"

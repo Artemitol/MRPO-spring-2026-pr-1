@@ -1,8 +1,6 @@
 # Практика 1 — ООО «Обувь»
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/REPLACE_WITH_REAL_BADGE_ID/maintainability)](https://codeclimate.com/)
-
-> После подключения репозитория в CodeClimate замени `REPLACE_WITH_REAL_BADGE_ID` на актуальный идентификатор бейджа.
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/6c7149e281a44fc2a2b783e52fb81e84)](https://app.codacy.com/gh/Artemitol/MRPO-spring-2026-pr-1/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 ## Стек
 
